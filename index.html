@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Team Maker</title>
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+     <style>
+        /* px-1 rounded bg-white */
+        .player-name {
+            padding: 0px 4px;
+            border-radius: 2px;
+            background-color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            overflow: hidden;
+        }
+        
+        /* flex flex-col items-center */
+        .player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 3px;
+            /* width: 64px; */
+            width: 16%;
+        }
+     </style>
+</head>
+<body class="">
+    <div class="flex w-full h-screen">
+        <div class="flex w-full h-screen absolute z-[-10]">
+            <div class="bg-green-500 flex-1 h-full"></div>
+            <div class="bg-green-600 flex-1 h-full"></div>
+            <div class="bg-green-500 flex-1 h-full"></div>
+            <div class="bg-green-600 flex-1 h-full"></div>
+            <div class="bg-green-500 flex-1 h-full"></div>
+            <div class="bg-green-600 flex-1 h-full"></div>
+            <div class="bg-green-500 flex-1 h-full"></div>
+            <div class="bg-green-600 flex-1 h-full"></div>
+            <div class="bg-green-500 flex-1 h-full"></div>
+            <div class="bg-green-600 flex-1 h-full"></div>
+            <div class="bg-green-500 flex-1 h-full"></div>
+            <div class="bg-green-600 flex-1 h-full"></div>
+            <div class="bg-green-500 flex-1 h-full"></div>
+            <div class="bg-green-600 flex-1 h-full"></div>
+            <div class="bg-green-500 flex-1 h-full"></div>
+        </div>
+
+        <!-- cricket pitch -->
+         <div class="absolute flex justify-center items-center w-full h-screen z-[-8]">
+             <div class="w-[17%] h-[36%] opacity-90 bg-gray-400 "></div>
+         </div>
+
+         <!-- Main section -->
+          <section class="w-full h-screen">
+            <!-- Team area -->
+              <div class="w-full h-[65%] flex">
+                <div class="w-[50%] h-full pt-12 border-r-2 border-dashed border-blue-500">
+                    <!-- captain of team A -->
+                    <div class="w-full flex justify-center">
+                        <div class="flex flex-col items-center w-[64px] scale-110 relative">
+                            <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                            <h3 id="team-A-captain" class="player-name">Captain</h3>
+                            <span class="absolute bg-orange-300 font-bold text-[11px] rounded-full px-[5px] top-[-10px] left-0">C</span>
+                        </div>
+                    </div>
+                    <!-- Team A players -->
+                    <div id="team-A-player" class="w-full mt-3 flex flex-wrap justify-center">
+                        <!-- <div class="player">
+                            <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                            <h3 class="player-name">Himanshu</h3>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="w-[50%] h-full pt-12 border-l-2 border-dashed border-blue-500">
+                    <!-- captain of team B -->
+                    <div class="w-full flex justify-center">
+                        <div class="flex flex-col items-center w-[64px] scale-110 relative">
+                            <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                            <h3 id="team-B-captain" class="player-name">Captain</h3>
+                            <span class="absolute bg-orange-300 font-bold text-[11px] rounded-full px-[5px] top-[-10px] left-0">C</span>
+                        </div>
+                    </div>
+                    <!-- Team B players -->
+                    <div id="team-B-player" class="w-full mt-3 flex flex-wrap justify-center">
+                        <!-- <div class="player">
+                            <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                            <h3 class="player-name">Himanshu</h3>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Make a Team Button -->
+             <div class="w-full flex justify-center h-[5%]">
+                <button id="make-team-button" class="bg-blue-500 h-full px-3 text-white hover:scale-105 duration-150 active:scale-100 rounded">Make a Team</button>
+                <button id="add_player" class="bg-blue-500 h-full px-3 text-white hover:scale-105 duration-150 active:scale-100 rounded ml-4">add player</button>
+             </div>
+
+            <!-- All player inside this div -->
+            <div id="all-player-list" class="w-full h-[30%] flex flex-wrap justify-center">
+                <!-- <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Himanshu</h3>
+                </div> -->
+            </div>
+
+            <!-- Input player name -->
+            <div class="flex bg-gray-200 p-2 w-full justify-center">
+                <input type="text" id="player-name-input" class="rounded-l-full px-4 w-[60%]">
+                <button id="add-player-button" class="bg-blue-400 active:bg-blue-500 rounded-r-full px-3 py-2 text-white">Add Player</button>
+            </div>
+          </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
