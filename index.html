@@ -29,6 +29,7 @@
             margin: 0px 3px;
             /* width: 64px; */
             width: 16%;
+            cursor: pointer;
         }
      </style>
 </head>
@@ -58,7 +59,7 @@
          </div>
 
          <!-- Main section -->
-          <section class="w-full h-screen">
+          <section class="w-full h-screen relative">
             <!-- Team area -->
               <div class="w-full h-[65%] flex">
                 <div class="w-[50%] h-full pt-12 border-r-2 border-dashed border-blue-500">
@@ -105,14 +106,46 @@
 
             <!-- All player inside this div -->
             <div id="all-player-list" class="w-full h-[30%] flex flex-wrap justify-center">
-                <!-- <div class="player">
+                <div class="player">
                     <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
                     <h3 class="player-name">Himanshu</h3>
-                </div> -->
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Gaurav</h3>
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Luck</h3>
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Sudarshan</h3>
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Akshat</h3>
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Pratik B.</h3>
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Krishna</h3>
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Devesh</h3>
+                </div>
+                <div class="player">
+                    <img class="w-[40px] h-[35px]" src="./Assets/player.png" alt="player Image">
+                    <h3 class="player-name">Ashwin</h3>
+                </div>
             </div>
 
             <!-- Input player name -->
-            <div class="flex bg-gray-200 p-2 w-full justify-center">
+            <div class="flex bg-green-500 shadow-xl p-2 w-full justify-center ">
                 <input type="text" id="player-name-input" class="rounded-l-full px-4 w-[60%]">
                 <button id="add-player-button" class="bg-blue-400 active:bg-blue-500 rounded-r-full px-3 py-2 text-white">Add Player</button>
             </div>

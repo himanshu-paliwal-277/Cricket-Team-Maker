@@ -3,10 +3,22 @@ const playerNameInput = document.getElementById("player-name-input");
 const allPlayerList = document.getElementById("all-player-list");
 const makeTeamButton = document.getElementById("make-team-button");
 
+const Players = document.querySelectorAll(".player");
+
+Players.forEach((player) => {
+  player.addEventListener("dblclick", () => {
+    player.remove();
+  })
+});
+
 addPlayerButton.addEventListener("click", () => {
   if (playerNameInput.value !== "") {
     let div = document.createElement("div");
     div.classList.add("player");
+
+    div.addEventListener("dblclick", () => {
+      div.remove();
+    })
 
     let img = document.createElement("img");
     img.src = "./Assets/player.png";
