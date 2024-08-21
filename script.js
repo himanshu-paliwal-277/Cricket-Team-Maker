@@ -2,6 +2,7 @@ const addPlayerButton = document.getElementById("add-player-button");
 const playerNameInput = document.getElementById("player-name-input");
 const allPlayerList = document.getElementById("all-player-list");
 const makeTeamButton = document.getElementById("make-team-button");
+let teamNotPrepared = true;
 
 const Players = document.querySelectorAll(".player");
 
@@ -51,7 +52,7 @@ add_player.addEventListener("click", () => {
 // ------------------------------------------------------
 
 makeTeamButton.addEventListener("click", () => {
-  const AllPlayer = document.querySelectorAll(".player");
+  const AllPlayer = allPlayerList.querySelectorAll(".player");
   const teamAcaptain = document.getElementById("team-A-captain");
   const teamBcaptain = document.getElementById("team-B-captain");
 
@@ -79,13 +80,15 @@ makeTeamButton.addEventListener("click", () => {
   const teamAplayers = document.getElementById("team-A-player");
   const teamBplayers = document.getElementById("team-B-player");
 
-  teamAcaptain.textContent = AllPlayer[arr[0]].querySelector("h3").textContent;
-  teamBcaptain.textContent = AllPlayer[arr[1]].querySelector("h3").textContent;
-  AllPlayer[arr[0]].remove();
-  AllPlayer[arr[1]].remove();
+  if(teamNotPrepared) {
+    teamAcaptain.textContent = AllPlayer[arr[0]].querySelector("h3").textContent;
+    teamBcaptain.textContent = AllPlayer[arr[1]].querySelector("h3").textContent;
+    AllPlayer[arr[0]].remove();
+    AllPlayer[arr[1]].remove();
+    teamNotPrepared = false;
+  }
 
   arr.forEach((element, index) => {
-    if (index < 2) return;
     setTimeout(() => {
       AllPlayer[element].style.width = "30%";
       if (index % 2 === 0) {
